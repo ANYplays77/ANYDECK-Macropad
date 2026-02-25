@@ -1,67 +1,67 @@
-# ANYDECK Macropad
+# ANYDECK Macropad 🎹
 
-Welcome to the **ANYDECK** project! This is an open-source, customizable 6-key macropad equipped with two rotary encoders, an OLED display, and RGB lighting. Powered by the Seeed Studio XIAO RP2040, it's designed to help you boost your productivity and streamline your workflow.
+**ANYDECK** est un macropad mécanique à 6 touches, puissant et entièrement personnalisable. Conçu autour du microcontrôleur **XIAO RP2040**, il intègre deux encodeurs rotatifs, un écran OLED et un éclairage RGB pour offrir un contrôle total sur votre workflow.
 
 ---
 
-## 📸 Overall Hackpad
-Here is a look at the fully assembled ANYDECK with its custom 3D-printed case, mechanical switches, and rotary encoder knobs.
-
+## 📸 Aperçu Global
+Voici le rendu final de l'ANYDECK assemblé, montrant l'intégration des touches, de l'écran et des encodeurs dans son boîtier 3D.
 ![Overall Hackpad](UIOO.PNG)
 
 ---
 
-## 🔌 Schematic
-The circuit is built around the Seeed Studio XIAO RP2040 microcontroller. It features a switch matrix with diodes for anti-ghosting, I2C connections for the SSD1306 OLED display, and data lines for the SK6812 RGB LEDs.
-
+## 🔌 Schématique
+Le circuit gère une matrice de 6 touches avec diodes anti-ghosting, une communication I2C pour l'écran OLED et un bus de données pour les LEDs Neopixel.
 ![Schematic](rgr.PNG)
 
 ---
 
-## 🛠️ Printed Circuit Board (PCB)
-The custom 2-layer PCB was designed to neatly route all components within the compact footprint of the ANYDECK case. 
-
+## 🛠️ Design du PCB
+Le PCB double couche a été conçu pour maximiser l'espace tout en assurant une connexion fiable pour tous les composants.
 ![PCB Layout](Capture.PNG)
-
-*Design credits on silkscreen: rayanou, sou, farid, @anis.*
 
 ---
 
-## 📦 Case Design and Assembly
-The enclosure consists of a 3D-printed top housing and a bottom plate. The top housing includes precision cutouts for the 6 mechanical switches, the OLED screen, and the two rotary encoders. 
+## 📦 Boîtier et Assemblage
+L'enclosure est optimisée pour l'impression 3D, avec un ajustement précis pour les composants mécaniques et électroniques.
 
-**Case Top View:**
+**Vue supérieure du boîtier :**
 ![Case Top](YYM.PNG)
 
-**Internal Assembly / Fit:**
-The switches snap securely into the top plate, while the rotary encoders and screen sit flush with the surface.
-![Assembled Internals](et45.PNG)
+**Ajustement des composants :**
+![Internal Fitment](et45.PNG)
 
 ---
 
 ## 🧾 Bill of Materials (BOM)
 
-To build your own ANYDECK, you will need the following components:
-
-| Item | Quantity | Description / Reference |
+| Composant | Quantité | Description |
 | :--- | :---: | :--- |
-| **Microcontroller** | 1 | Seeed Studio XIAO RP2040 |
-| **Mechanical Switches** | 6 | MX-compatible mechanical switches (e.g., Cherry, Gateron) |
-| **Diodes** | 8 | 1N4148 (Through-hole or SMD, per your PCB footprint) |
-| **Rotary Encoders** | 2 | Standard Rotary Encoders with push-button functionality (SW1, SW2) |
-| **Encoder Knobs** | 2 | Sized to fit your rotary encoders |
-| **Display** | 1 | SSD1306 OLED Display (I2C) |
-| **RGB LEDs** | 2 | SK6812 (D16, D17) |
-| **3D Printed Case** | 1 | ANYDECK Top Housing (`YYM.PNG`) |
-| **3D Printed Base** | 1 | Bottom Plate |
-| **Screws/Hardware** | Set | M2/M3 screws for case assembly (as per your CAD holes) |
+| **Microcontrôleur** | 1 | Seeed Studio XIAO RP2040 |
+| **Switches Mécaniques** | 6 | Switches de type MX |
+| **Encodeurs Rotatifs** | 2 | Encodeurs avec bouton poussoir |
+| **Écran** | 1 | OLED SSD1306 (I2C) |
+| **LEDs RGB** | 2 | SK6812 (Neopixels) |
+| **Diodes** | 8 | 1N4148 (Matrice de touches) |
+| **Boîtier** | 1 | Set imprimé en 3D (Top & Base) |
 
 ---
 
-## 🚀 Getting Started
+## 🔧 Instructions de Montage
 
-1. **PCB Fabrication:** Order the PCB using the provided Gerber files.
-2. **3D Printing:** Print the top and bottom cases (PLA, PETG, or Resin work great).
-3. **Soldering:** Solder the diodes, XIAO RP2040, OLED, and encoders to the PCB.
-4. **Assembly:** Fit the mechanical switches into the 3D-printed top plate, then solder them to the PCB. Secure the case with screws.
-5. **Firmware:** Flash your favorite macropad firmware (such as KMK or QMK) configured for the RP2040.
+1.  **Soudure du PCB :** Soudez d'abord les diodes (attention à la polarité), puis le XIAO RP2040 et les LEDs RGB.
+2.  **Composants d'interface :** Installez et soudez l'écran OLED et les deux encodeurs rotatifs.
+3.  **Montage mécanique :** Fixez les switches dans la partie supérieure du boîtier (Top Case).
+4.  **Soudure finale :** Placez le PCB sur les broches des switches, soudez-les, puis assemblez la base du boîtier.
+5.  **Finitions :** Ajoutez les keycaps et les boutons des encodeurs.
+
+---
+
+## 🚀 Mode d'Emploi
+
+1.  **Connexion :** Branchez l'ANYDECK via USB-C à votre ordinateur.
+2.  **Contrôles :** Les 6 touches déclenchent vos macros. Utilisez les encodeurs pour le volume ou le défilement.
+3.  **Affichage :** L'écran affiche les informations sur vos raccourcis ou le profil actif.
+4.  **Configuration :** L'ANYDECK apparaît comme un lecteur USB. Modifiez le fichier `code.py` pour personnaliser vos touches (via KMK ou CircuitPython).
+
+---
