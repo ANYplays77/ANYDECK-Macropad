@@ -13,13 +13,13 @@ This is a photo of the finished macropad inside its 3D printed case.
 ---
 
 ## Schematic
-The build uses a XIAO RP2040. The keys are wired with diodes to prevent signal conflicts. The screen uses the I2C protocol.
+The build uses a XIAO RP2040. The keys are wired with diodes to prevent signal conflicts. 
 ![Schematic](rgr.PNG)
 
 ---
 
 ## PCB
-The printed circuit board is a compact double-layer design that holds all parts, including the Neopixel LEDs under the keys.
+The printed circuit board is a compact double-layer design that holds all parts,
 ![PCB Layout](Capture.PNG)
 
 ---
@@ -62,4 +62,5 @@ The case is designed in two parts. The switches click into the top plate before 
 ## How to Use
 
 Once you plug it in via USB-C, your computer will see ANYDECK as a keyboard. You can change shortcuts by opening the code.py file on the USB drive (using CircuitPython/KMK). The encoders control volume and scrolling by default, and the screen shows your current navigation info.
+
 
