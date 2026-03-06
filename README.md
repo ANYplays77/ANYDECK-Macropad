@@ -1,68 +1,62 @@
 # ANYDECK Macropad
 
-**ANYDECK** est un macropad mécanique à 6 touches, puissant et entièrement personnalisable. Conçu autour du microcontrôleur **XIAO RP2040**, il intègre deux encodeurs rotatifs, un écran OLED et un éclairage RGB pour offrir un contrôle total sur votre workflow.
+ANYDECK is a 6-key mechanical macropad I designed to be simple and useful. It uses a XIAO RP2040 controller and features two rotary encoders, a small OLED screen, and RGB lighting.
+
+The goal was to make a sturdy desktop tool that is easy to build for managing shortcuts or volume.
 
 ---
 
-## 📸 Aperçu Global
-Voici le rendu final de l'ANYDECK assemblé, montrant l'intégration des touches, de l'écran et des encodeurs dans son boîtier 3D.
+## Project Overview
+This is a photo of the finished macropad inside its 3D printed case.
 ![Overall Hackpad](UIOO.PNG)
 
 ---
 
-## 🔌 Schématique
-Le circuit gère une matrice de 6 touches avec diodes anti-ghosting, une communication I2C pour l'écran OLED et un bus de données pour les LEDs Neopixel.
+## Schematic
+The build uses a XIAO RP2040. The keys are wired with diodes to prevent signal conflicts. The screen uses the I2C protocol.
 ![Schematic](rgr.PNG)
 
 ---
 
-## 🛠️ Design du PCB
-Le PCB double couche a été conçu pour maximiser l'espace tout en assurant une connexion fiable pour tous les composants.
+## PCB
+The printed circuit board is a compact double-layer design that holds all parts, including the Neopixel LEDs under the keys.
 ![PCB Layout](Capture.PNG)
 
 ---
 
-## 📦 Boîtier et Assemblage
-L'enclosure est optimisée pour l'impression 3D, avec un ajustement précis pour les composants mécaniques et électroniques.
+## Case and Assembly
+The case is designed in two parts. The switches click into the top plate before being soldered to the PCB to keep everything solid.
 
-**Vue supérieure du boîtier :**
+**Top case view:**
 ![Case Top](YYM.PNG)
 
-**Ajustement des composants :**
+**Internal assembly:**
 ![Internal Fitment](et45.PNG)
 
 ---
 
-## 🧾 Bill of Materials (BOM)
+## Bill of Materials (BOM)
 
-| Composant | Quantité | Description |
-| :--- | :---: | :--- |
-| **Microcontrôleur** | 1 | Seeed Studio XIAO RP2040 |
-| **Switches Mécaniques** | 6 | Switches de type MX |
-| **Encodeurs Rotatifs** | 2 | Encodeurs avec bouton poussoir |
-| **Écran** | 1 | OLED SSD1306 (I2C) |
-| **LEDs RGB** | 2 | SK6812 (Neopixels) |
-| **Diodes** | 8 | 1N4148 (Matrice de touches) |
-| **Boîtier** | 1 | Set imprimé en 3D (Top & Base) |
+* 1x Seeed Studio XIAO RP2040
+* 6x Mechanical switches (MX compatible)
+* 2x EC11 rotary encoders
+* 1x SSD1306 OLED screen (I2C)
+* 8x 1N4148 Diodes
+* 2x SK6812 RGB LEDs
+* 1x 3D printed case (Top and Base)
 
 ---
 
-## 🔧 Instructions de Montage
+## Build Instructions
 
-1.  **Soudure du PCB :** Soudez d'abord les diodes (attention à la polarité), puis le XIAO RP2040 et les LEDs RGB.
-2.  **Composants d'interface :** Installez et soudez l'écran OLED et les deux encodeurs rotatifs.
-3.  **Montage mécanique :** Fixez les switches dans la partie supérieure du boîtier (Top Case).
-4.  **Soudure finale :** Placez le PCB sur les broches des switches, soudez-les, puis assemblez la base du boîtier.
-5.  **Finitions :** Ajoutez les keycaps et les boutons des encodeurs.
-
----
-
-## 🚀 Mode d'Emploi
-
-1.  **Connexion :** Branchez l'ANYDECK via USB-C à votre ordinateur.
-2.  **Contrôles :** Les 6 touches déclenchent vos macros. Utilisez les encodeurs pour le volume ou le défilement.
-3.  **Affichage :** L'écran affiche les informations sur vos raccourcis ou le profil actif.
-4.  **Configuration :** L'ANYDECK apparaît comme un lecteur USB. Modifiez le fichier `code.py` pour personnaliser vos touches (via KMK ou CircuitPython).
+1. Solder the diodes to the PCB. Make sure the black line on the diode matches the mark on the board.
+2. Solder the XIAO RP2040 and the two RGB LEDs.
+3. Install and solder the OLED screen and the two rotary encoders.
+4. Put the switches into the top case, place the PCB over them, and solder the switch pins.
+5. Close the case with the bottom plate and add your keycaps and encoder knobs.
 
 ---
 
+## How to Use
+
+Once you plug it in via USB-C, your computer will see ANYDECK as a keyboard. You can change shortcuts by opening the code.py file on the USB drive (using CircuitPython/KMK). The encoders control volume and scrolling by default, and the screen shows your current navigation info.
