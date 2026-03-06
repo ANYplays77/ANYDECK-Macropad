@@ -1,4 +1,4 @@
-# ANYDECK Macropad 🎹
+# ANYDECK Macropad
 
 **ANYDECK** est un macropad mécanique à 6 touches, puissant et entièrement personnalisable. Conçu autour du microcontrôleur **XIAO RP2040**, il intègre deux encodeurs rotatifs, un écran OLED et un éclairage RGB pour offrir un contrôle total sur votre workflow.
 
@@ -65,3 +65,4 @@ L'enclosure est optimisée pour l'impression 3D, avec un ajustement précis pour
 4.  **Configuration :** L'ANYDECK apparaît comme un lecteur USB. Modifiez le fichier `code.py` pour personnaliser vos touches (via KMK ou CircuitPython).
 
 ---
+
