@@ -28,9 +28,11 @@ The printed circuit board is a compact double-layer design that holds all parts,
 The case is designed in two parts. The switches click into the top plate before being soldered to the PCB to keep everything solid.
 
 **Top case view:**
+
 ![Case Top](YYM.PNG)
 
 **Internal assembly:**
+
 ![Internal Fitment](et45.PNG)
 
 ---
@@ -60,3 +62,4 @@ The case is designed in two parts. The switches click into the top plate before 
 ## How to Use
 
 Once you plug it in via USB-C, your computer will see ANYDECK as a keyboard. You can change shortcuts by opening the code.py file on the USB drive (using CircuitPython/KMK). The encoders control volume and scrolling by default, and the screen shows your current navigation info.
+
